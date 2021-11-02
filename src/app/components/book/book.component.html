@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="bookmark">
+        <p>{{ bookmark.title }}</p>
+        <app-book-item  *ngFor="let item of bookmark.marks; let i = index"
+            [valueItem]="item"
+            [indexItem]="i"
+            (onHandles)="onSwitchHandler($event)">
+        </app-book-item>
+
+        <div class="btn" (click) = "onAddBook()">add new legend of homework</div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="bookmark-item">
+    <div *ngIf="!is_edit; else editor">
+        {{ valueItem  }}
+    </div>
+    
+    <ng-template #editor>
+        <input type="text" [(ngModel)] = "valueItem">
+    </ng-template>
+    
+    <div class="btn-group">
+        <div class="btn" 
+            *ngIf="!is_edit" 
+            (click) = "handleEdit()">edit</div>
+
+        <div class="btn" 
+            *ngIf="is_edit" 
+            (click) = "handleSave('change')">save</div>
+
+        <div class="btn"
+            (click) = "handleRemove('remove')">remove</div>
+    </div>
+</div>
