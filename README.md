@@ -1,5 +1,7 @@
 # AngularHomework04
 
+stackblitz: https://stackblitz.com/edit/github-72968p?file=src%2Fapp%2Fapp.component.ts
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.10.
 
 ## Development server
