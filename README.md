@@ -2,6 +2,30 @@
 
 stackblitz: https://stackblitz.com/edit/github-72968p?file=src%2Fapp%2Fapp.component.ts
 
+1) Why should we use getter and setter instead of just setting the variable in the service?
+
+У класса есть специальные методы getter, setter для доступа к свойствам.
+getter и setter должны иметь одно и то же имя, поскольку они представляют собой еще один способ определения свойства.
+getter - получаем свойство, setter - устанавливаем новое значение для нашего свойства
+
+2) How to set a default value for @Input() property?
+
+Декоратор @Input используется дл ппередачи данных от родителя к потомку, можно поставить значения по умолчанию в самом потомке
+example:
+import { Input } from '@angular/core';
+@Input() title: string = 'homework 04';
+
+3) What is the difference between @ViewChild() і @ContentChild()?
+
+С помощью декоратора @ViewChild() у нас возможность обращаться к методам и прочей функциональности дочернего компонента или нативного элемента, к которому применется.
+С помощью декоратора @ContentChild() мы можем получить переменные, которые передаются с кодом через ng-content.
+По сути зависит как передаём информацию через компонент.
+
+4)Why do we add providedIn: ‘root’?
+
+Вроде как подключение к основному модулю, чтобы в пределах модуля данные были общие. т.е действие сервиса для всего приложения.
+Один объект сервиса для всех частей приложения.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.10.
 
 ## Development server
